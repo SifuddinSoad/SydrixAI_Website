@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar.jsx';
+import Home from './components/Home.jsx';
 import './App.css';
 
 function App() {
@@ -13,12 +14,7 @@ function App() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
       >
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1, duration: 0.7 }}>
-          Welcome to SydrixAI
-        </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.2, duration: 0.7 }}>
-          This is a modern React website. Use the top navigation to explore.
-        </motion.p>
+        <Home />
       </motion.main>
     </motion.div>
   );
