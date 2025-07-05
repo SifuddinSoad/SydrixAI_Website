@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Footer from './components/Footer.jsx';
+import Contact from './components/Contact.jsx';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         transition={{ duration: 0.8, delay: 0.7 }}
       >
         <Hero />
+        <Contact />
       </motion.main>
       <Footer />
     </motion.div>

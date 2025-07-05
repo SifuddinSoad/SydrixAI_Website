@@ -17,7 +17,7 @@ body, .App {
   max-width: 1100px;
   position: sticky;
   top: 1rem;
-  z-index: 100;
+  z-index: 1000;
   transition: box-shadow 0.2s, background 0.2s;
 }
 
