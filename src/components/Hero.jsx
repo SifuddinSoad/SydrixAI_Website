@@ -8,32 +8,12 @@ import Button from '@mui/material/Button';
 import headlineCurve from '../assets/hero/headline-curve.svg';
 import heroImg from '../assets/hero/hero.png';
 
-const exps = [
-  { label: 'Students', value: '10K+' },
-  { label: 'Quality Course', value: '20+' },
-  { label: 'Experience Mentors', value: '10+' },
-];
-
-const ExpItem = ({ item }) => {
-  const { value, label } = item;
-  return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
-      <Typography sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}>
-        {value}
-      </Typography>
-      <Typography color="text.secondary" variant="h5">
-        {label}
-      </Typography>
-    </Box>
-  );
-};
-
 const Hero = () => {
   return (
-    <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
+    <Box id="hero" sx={{ backgroundColor: 'transparent' , position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
-        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' } }}>
-          <Grid item xs={12} md={7}>
+        <Grid container spacing={0} sx={{ flexDirection: { xs: 'column', md: 'unset' }}}>
+          <Grid item xs={12} md={7} sx={{ zIndex: 100 }}>
             <Box
               sx={{
                 textAlign: { xs: 'center', md: 'left' },
@@ -115,7 +95,7 @@ const Hero = () => {
                   with Different Way
                 </Typography>
               </Box>
-              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
+              <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' }, zIndex: 100 }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {"Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you can study comfortably and absorb the material easily."}
                 </Typography>
@@ -130,22 +110,13 @@ const Hero = () => {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
-            <Box sx={{ lineHeight: 0 }}>
+          <Grid item xs={12} md={5} sx={{ position: 'absolute', right: 0, top: 0 }}>
+            <Box sx={{ lineHeight: 0, display: { xs: 'none', md: 'block' } }}>
               <img src={heroImg} width={775} height={787} alt="Hero img" style={{ maxWidth: '100%', height: 'auto' }} />
             </Box>
           </Grid>
         </Grid>
-        {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4, mt: 6 }}>
-          <Grid container spacing={2}>
-            {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
-                <ExpItem item={item} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
+
       </Container>
     </Box>
   );
