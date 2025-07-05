@@ -4,11 +4,36 @@ import './index.css';
 import App from './App.jsx';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#0775f9', // --primary
+    },
+    secondary: {
+      main: '#976cfc', // --secondary
+    },
+    accent: {
+      main: '#ae46fb', // --accent
+    },
+    background: {
+      default: '#f1f8ff', // --background
+      paper: '#fff',
+    },
+    text: {
+      primary: '#010b19', // --text
+      secondary: '#666',
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

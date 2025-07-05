@@ -121,7 +121,7 @@ body, .App {
 }
 
 /* Mobile nav hidden by default */
-@media (max-width: 600px) {
+@media (max-width: 984px) {
   .topbar {
     flex-direction: row;
     height: auto;

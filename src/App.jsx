@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
-import Home from './components/Home.jsx';
+import Hero from './components/Hero.jsx';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
       >
-        <Home />
+        <Hero />
       </motion.main>
     </motion.div>
   );
