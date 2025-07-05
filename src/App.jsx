@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
+import Footer from './components/Footer.jsx';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       >
         <Hero />
       </motion.main>
+      <Footer />
     </motion.div>
   );
 }
