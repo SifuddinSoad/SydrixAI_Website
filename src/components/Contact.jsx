@@ -10,30 +10,27 @@ const Contact = () => {
           <div className="flex">
             <label>
               <input className="input" type="text" placeholder required />
-              <span>first name</span>
+              <span>First Name</span>
             </label>
             <label>
               <input className="input" type="text" placeholder required />
-              <span>last name</span>
+              <span>Last Name</span>
             </label>
           </div>  
           <label>
             <input className="input" type="email" placeholder required />
-            <span>email</span>
+            <span>Email</span>
           </label> 
           <label>
             <input className="input" placeholder type="tel" required />
-            <span>contact number</span>
+            <span>Contact Number</span>
           </label>
           <label>
             <textarea className="input01" placeholder rows={3} required defaultValue={""} />
-            <span>message</span>
+            <span>Message</span>
           </label>
           <button type="submit" className="fancy">
-            <span className="top-key" />
-            <span className="text">submit</span>
-            <span className="bottom-key-1" />
-            <span className="bottom-key-2" />
+            <span className="text">Submit</span>
           </button>
         </form>
       </StyledWrapper>
@@ -59,12 +56,14 @@ const StyledWrapper = styled.div`
   .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 350px;
+    gap: 20px;
+    max-width: 500px;
+    width: 100%;
     background-color: #355891;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
     position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 
   .message {
@@ -75,183 +74,244 @@ const StyledWrapper = styled.div`
   .flex {
     display: flex;
     width: 100%;
-    gap: 6px;
+    gap: 15px;
+  }
+
+  .flex label {
+    flex: 1;
   }
 
   .form label {
     position: relative;
+    display: block;
   }
 
   .form label .input {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 15px 15px 15px 15px;
     outline: 0;
-    border: 1px solid #355891;
-    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  .form label .input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .form label .input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .form label .input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .form label .input + span {
     position: absolute;
-    left: 10px;
+    left: 15px;
     top: 15px;
-    color: #355891;
-    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
     cursor: text;
     transition: 0.3s ease;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 5px;
   }
 
   .form label .input:placeholder-shown + span {
     top: 15px;
-    font-size: 0.9em;
+    font-size: 14px;
+    background: transparent;
   }
 
-  .form label .input:focus + span,.form label .input:valid + span {
-    top: 30px;
-    font-size: 0.7em;
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    top: -8px;
+    font-size: 12px;
     font-weight: 600;
+    color: white;
+    background: #355891;
   }
 
   .form label .input:valid + span {
-    color: green;
+    color: #4ade80;
   }
 
   .input01 {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 15px 15px 15px 15px;
     outline: 0;
-    border: 1px solid #355891;
-    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .input01::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-size: 14px;
+  }
+
+  .input01:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .input01:focus::placeholder {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .form label .input01 + span {
     position: absolute;
-    left: 10px;
-    top: 50px;
-    color: #355891;
-    font-size: 0.9em;
+    left: 15px;
+    top: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
     cursor: text;
     transition: 0.3s ease;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 5px;
   }
 
   .form label .input01:placeholder-shown + span {
-    top: 40px;
-    font-size: 0.9em;
+    top: 15px;
+    font-size: 14px;
+    background: transparent;
   }
 
-  .form label .input01:focus + span,.form label .input01:valid + span {
-    top: 50px;
-    font-size: 0.7em;
+  .form label .input01:focus + span,
+  .form label .input01:valid + span {
+    top: -8px;
+    font-size: 12px;
     font-weight: 600;
+    color: white;
+    background: #355891;
   }
 
   .form label .input01:valid + span {
-    color: green;
+    color: #4ade80;
   }
 
   .fancy {
     background-color: white;
     border: 2px solid #355891;
-    border-radius: 0px;
+    border-radius: 8px;
     box-sizing: border-box;
     color: #355891;
     cursor: pointer;
-    display: inline-block;
-    font-weight: 390;
-    letter-spacing: 2px;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
     outline: none;
-    overflow: visible;
-    padding: 8px 30px;
+    overflow: hidden;
+    padding: 15px 30px;
     position: relative;
-    text-align: center;
     text-decoration: none;
-    text-transform: none;
+    text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     user-select: none;
-    font-size: 13px;
-  }
-
-  .fancy::before {
-    content: " ";
-    width: 1.7rem;
-    height: 2px;
-    background: #355891;
-    top: 50%;
-    left: 1.5em;
-    position: absolute;
-    transform: translateY(-50%);
-    transform: translateX(230%);
-    transform-origin: center;
-    transition: background 0.3s linear, width 0.3s linear;
+    font-size: 14px;
+    width: 100%;
+    max-width: 200px;
+    align-self: center;
   }
 
   .fancy .text {
     font-size: 1.125em;
     line-height: 1.33333em;
-    padding-left: 2em;
     display: block;
-    text-align: left;
+    text-align: center;
     transition: all 0.3s ease-in-out;
     text-transform: lowercase;
     text-decoration: none;
     color: #355891;
-    transform: translateX(30%);
+    position: relative;
+    z-index: 2;
   }
 
-  .fancy .top-key {
-    height: 2px;
-    width: 1.5625rem;
-    top: -2px;
-    left: 0.625rem;
+  .fancy::before {
+    content: "";
     position: absolute;
+    top: 50%;
+    right: 26px;
+    width: 0;
+    height: 2px;
     background: #355891;
-    transition: width 0.5s ease-out, left 0.3s ease-out;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
   }
 
-  .fancy .bottom-key-1 {
-    height: 2px;
-    width: 1.5625rem;
-    right: 1.875rem;
-    bottom: -2px;
+  .fancy::after {
+    content: "";
     position: absolute;
-    background: #355891;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
-  }
-
-  .fancy .bottom-key-2 {
-    height: 2px;
-    width: 0.625rem;
-    right: 0.625rem;
-    bottom: -2px;
-    position: absolute;
-    background: #355891;
-    transition: width 0.5s ease-out, right 0.3s ease-out;
+    top: 50%;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid #355891;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
   }
 
   .fancy:hover {
     color: #355891;
     background: #5f82a9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   .fancy:hover::before {
-    width: 1.5rem;
-    background: #355891;
+    width: 20px;
+    right: 26px;
+  }
+
+  .fancy:hover::after {
+    right: 20px;
   }
 
   .fancy:hover .text {
     color: white;
-    padding-left: 1.5em;
+    transform: translateX(-10px);
   }
 
-  .fancy:hover .top-key {
-    left: -2px;
-    width: 0px;
-  }
-
-  .fancy:hover .bottom-key-1,
-   .fancy:hover .bottom-key-2 {
-    right: 0;
-    width: 0;
+  @media (max-width: 768px) {
+    .form {
+      max-width: 90%;
+      padding: 20px;
+      gap: 15px;
+    }
+    
+    .flex {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .fancy {
+      max-width: 100%;
+    }
   }
 `;
 

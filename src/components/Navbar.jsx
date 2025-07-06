@@ -5,9 +5,9 @@ import '../App.css';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
-  { href: '#how', label: 'How to use' },
-  { href: '#features', label: 'Features' },
   { href: '#about', label: 'About Us' },
+  { href: '#features', label: 'Features' },
+  { href: '#how', label: 'How to use' },
   { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
 ];

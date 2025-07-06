@@ -73,7 +73,7 @@ const Hero = () => {
                       },
                     }}
                   >
-                    Skill
+                    Study
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path
@@ -97,12 +97,12 @@ const Hero = () => {
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' }, zIndex: 100 }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
-                  {"Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you can study comfortably and absorb the material easily."}
+                  {"Let's take an online course to improve your Study in a different way, you can set your own study time according to your learning speed. So you can study comfortably and absorb the material easily."}
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <Button color="primary" size="large" variant="contained">
-                  Get Started
+                  Learn More
                 </Button>
                 <Button color="primary" size="large" variant="outlined" sx={{ ml: 2 }}>
                   Watch Video
